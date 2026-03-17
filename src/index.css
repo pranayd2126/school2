@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-fg);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-fg);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-fg);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-fg);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-fg);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-fg);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-fg);
+  
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-fg);
+  
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-fg);
+  
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-fg: var(--sidebar-accent-fg);
+  --color-sidebar-border: var(--sidebar-border);
+  
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --radius-sm: 0.75rem;
+}
+
+@layer base {
+  :root {
+    --bg: #f0f9ff;
+    --fg: #0c4a6e;
+    --card: #ffffff;
+    --card-fg: #0c4a6e;
+    --primary: #0ea5e9;
+    --primary-fg: #ffffff;
+    --secondary: #e0f2fe;
+    --secondary-fg: #0369a1;
+    --muted: #e0f2fe;
+    --muted-fg: #0284c7;
+    --accent: #0ea5e9;
+    --accent-fg: #ffffff;
+    --destructive: #ef4444;
+    --destructive-fg: #ffffff;
+    --border: #bae6fd;
+    --input: #bae6fd;
+    --ring: #0ea5e9;
+    --success: #10b981;
+    --success-fg: #ffffff;
+    --warning: #f59e0b;
+    --warning-fg: #ffffff;
+    --info: #3b82f6;
+    --info-fg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --sidebar-fg: #0369a1;
+    --sidebar-primary: #0c4a6e;
+    --sidebar-accent: #e0f2fe;
+    --sidebar-accent-fg: #0c4a6e;
+    --sidebar-border: #bae6fd;
+  }
+
+  .dark {
+    --bg: #020617;
+    --fg: #f8fafc;
+    --card: #0f172a;
+    --card-fg: #f8fafc;
+    --primary: #ffffff;
+    --primary-fg: #000000;
+    --secondary: #1e293b;
+    --secondary-fg: #f8fafc;
+    --muted: #1e293b;
+    --muted-fg: #94a3b8;
+    --accent: #ffffff;
+    --accent-fg: #000000;
+    --destructive: #ef4444;
+    --destructive-fg: #ffffff;
+    --border: #334155;
+    --input: #334155;
+    --ring: #ffffff;
+    --success: #10b981;
+    --success-fg: #ffffff;
+    --warning: #f59e0b;
+    --warning-fg: #ffffff;
+    --info: #3b82f6;
+    --info-fg: #ffffff;
+    --sidebar-bg: #020617;
+    --sidebar-fg: #94a3b8;
+    --sidebar-primary: #f8fafc;
+    --sidebar-accent: #1e293b;
+    --sidebar-accent-fg: #f8fafc;
+    --sidebar-border: #1e293b;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary selection:text-primary-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Dark mode overrides for hardcoded Tailwind classes */
+.dark .bg-white { background-color: var(--card) !important; }
+.dark .text-gray-900 { color: var(--foreground) !important; }
+.dark .text-gray-800 { color: var(--foreground) !important; }
+.dark .text-gray-700 { color: var(--foreground) !important; }
+.dark .text-gray-600 { color: var(--muted-foreground) !important; }
+.dark .text-gray-500 { color: var(--muted-foreground) !important; }
+.dark .text-gray-400 { color: var(--muted-foreground) !important; }
+.dark .bg-gray-50 { background-color: var(--secondary) !important; }
+.dark .bg-gray-100 { background-color: var(--secondary) !important; }
+.dark .border-gray-100 { border-color: var(--border) !important; }
+.dark .border-gray-200 { border-color: var(--border) !important; }
+.dark .border-gray-300 { border-color: var(--border) !important; }
+.dark .hover\:bg-gray-50:hover { background-color: var(--secondary) !important; }
+.dark .hover\:bg-gray-100:hover { background-color: var(--secondary) !important; }
+.dark .hover\:border-gray-300:hover { border-color: var(--border) !important; }
+.dark .divide-gray-50 > :not([hidden]) ~ :not([hidden]) { border-color: var(--border) !important; }
+.dark .divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: var(--border) !important; }
+
+@layer components {
+  .page-header {
+    @apply mb-8 flex flex-col gap-2;
+  }
+  .page-header h1 {
+    @apply text-3xl sm:text-4xl font-display font-bold tracking-tight text-foreground;
+  }
+  .page-header p {
+    @apply text-muted-foreground font-medium text-base sm:text-lg max-w-2xl;
+  }
+  
+  .card-elevated {
+    @apply bg-card rounded-[2rem] border border-border shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden;
+  }
+  
+  .badge-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold uppercase tracking-wider;
+  }
+  
+  .section-title {
+    @apply flex items-center gap-2 text-xl font-display font-bold text-foreground mb-6;
+  }
+  
+  .stat-card {
+    @apply bg-card rounded-[2rem] border border-border shadow-sm hover:shadow-md transition-all duration-300 p-6 relative overflow-hidden;
+  }
+  
+  .grid-dashboard {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+  
+  .table-head {
+    @apply text-left px-6 py-4 text-xs font-bold text-muted-foreground uppercase tracking-wider bg-secondary/30 border-b border-border;
+  }
+  
+  .table-cell {
+    @apply px-6 py-4 text-sm font-medium text-foreground border-b border-border/50;
+  }
+}
