@@ -50,7 +50,7 @@ export function DashboardLayout({ navItems, title }: DashboardLayoutProps) {
               <GraduationCap className="w-6 h-6" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg leading-tight tracking-tight text-sidebar-primary">Oakridge</span>
+              <span className="font-display font-bold text-lg leading-tight tracking-tight text-sidebar-primary">Sample</span>
               <span className="text-[10px] font-semibold uppercase tracking-widest text-sidebar-fg">International</span>
             </div>
           </div>
