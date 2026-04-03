@@ -76,7 +76,7 @@ export function Login() {
               <GraduationCap className="w-8 h-8 text-white relative z-10" />
             </motion.div>
             <h1 className="text-3xl font-display font-bold tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70">
-              Oakridge International
+              Sample
             </h1>
             <p className="text-white/60 font-medium text-sm tracking-wide uppercase">
               Student Portal
@@ -178,7 +178,7 @@ export function Login() {
         {/* Footer text */}
         <div className="text-center mt-8">
           <p className="text-white/40 text-xs font-medium tracking-wide">
-            &copy; {new Date().getFullYear()} Oakridge International School.
+            &copy; {new Date().getFullYear()} Sample School.
           </p>
         </div>
       </motion.div>
